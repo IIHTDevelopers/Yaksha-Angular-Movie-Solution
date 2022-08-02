@@ -1,0 +1,34 @@
+{
+  "movies": [
+    {
+      "id": 1,
+      "title": "Superman is flying",
+      "image": "url",
+      "ratings": 3.4,
+      "genre": "fantasy",
+      "length": 119,
+      "releasedDate": "2012-12-28",
+      "language": "English",
+      "showTime": "21:00",
+      "price": 300
+    }
+  ],
+  "tickets": [
+    {
+      "id": 1,
+      "mobile": "9898989898",
+      "email": "demo@gmail.com",
+      "seats": 4,
+      "movieId": 1,
+      "paid": 1200
+    },
+    {
+      "id": 2,
+      "email": "demo@gmail.com",
+      "mobile": "9898989878",
+      "seats": 2,
+      "movieId": 1,
+      "paid": 300
+    }
+  ]
+}

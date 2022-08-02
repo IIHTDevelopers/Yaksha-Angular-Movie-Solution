@@ -1,0 +1,24 @@
+<div>
+
+    <app-breadcrumb>
+        <p>Home | Movie | Show</p>
+    </app-breadcrumb>
+
+    <p class="error" *ngIf="message.length>0">{{message}}</p>
+
+    <form [formGroup]="bookingForm" *ngIf="selectedMovie!=null && ticket==null">
+        Email: <input type="text" formControlName="email" placeholder="Enter your emaild"/><br/>
+        Mobile: <input type="text" formControlName="mobile" placeholder="Enter you mobile" /><br/>
+        Seates: <input type="number" min="1" formControlName="seats" (change)="updateTotalPrice()"/><br/>
+        Price (Per seat): <input type="text" [value]="selectedMovie.price" readonly="readonly"/> <br/>
+        Price (Total): <input type="text" [value]="totalPrice" readonly="readonly"/> <br/>
+
+        <br/>
+        <button type="button" (click)="bookTicket()">Book</button>
+    </form>
+
+    <div *ngIf="ticket!=null" class="ticket">
+        <app-movie-ticket [ticket]="ticket"></app-movie-ticket>
+    </div>
+</div>
+    

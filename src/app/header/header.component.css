@@ -1,0 +1,22 @@
+header {
+    padding: 5px;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+}
+
+span {
+    width: 50%;
+    display: inline-block;
+}
+
+span.align-right {
+    text-align: right;
+}
+
+span.align-right a{
+    background-color: darkcyan;
+    color: white;
+    padding: 5px;
+    font-size: 1.2em;
+    border-radius: 4px;
+}

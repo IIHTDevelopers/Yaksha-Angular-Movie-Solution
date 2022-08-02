@@ -1,0 +1,9 @@
+<div class="ticket">
+    <p *ngIf="message.length>0">{{message}}</p>
+    
+    <div *ngIf="message.length==0">
+        <p>{{ticket|json}}</p>
+    
+        <button (click)="confirmBooking()">Confirm</button>
+    </div>
+</div>

@@ -1,0 +1,33 @@
+<p *ngIf="isLoading">Loading...</p>
+ 
+<div>
+    <button class="btn-success btn-block btn-lg" (click)="loadFirstTen()">
+        LOAD FIRST 10 TICKETS
+    </button>
+</div>
+ 
+<div class="table-responsive">
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th scope="col">ID</th>
+                <th scope="col">User's Email</th>
+                <th scope="col">User's Mobile</th>
+                <th scope="col">Seats</th>
+                <th scope="col">MovieId</th>
+                <th scope="col">Total Amount Paid</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let ticket of tickets;">
+                <th scope="row">{{ ticket.id }}</th>
+                <td> {{ ticket.email }} </td>
+                <td>{{ ticket.mobile }}</td>
+                <td>{{ ticket.seats }}</td>
+                <td>{{ ticket.movieId }}</td>
+                <td>{{ ticket.paid }}</td>
+            </tr>
+        </tbody>
+    </table>
+    
+</div>

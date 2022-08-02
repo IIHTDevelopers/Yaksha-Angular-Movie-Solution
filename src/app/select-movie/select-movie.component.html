@@ -1,0 +1,18 @@
+<app-breadcrumb>
+    <p>Home | Movie</p>
+</app-breadcrumb>
+
+<div class="movie">
+    <div *ngIf="movies.length == 0" class="errorMessage">
+        We do not contain any movie in db. Please try after some time.
+    </div>
+
+    <div *ngIf="movies.length > 0" class="movies">
+        <div *ngFor="let movie of movies">
+            <div (click)="selectMovie(movie)" class="card">
+                <app-card [movie]="movie"></app-card>
+            </div>
+        </div>
+        <div class="clear"></div>
+    </div>
+</div>
